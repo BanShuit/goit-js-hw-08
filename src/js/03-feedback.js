@@ -28,14 +28,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        localStorage.removeItem('feedback-form-state');
-        emailInput.value = '';
-        messageInput.value = '';
-
         const formData = {
             email: emailInput.value,
             message: messageInput.value
         };
-        console.log('Form data submitted:', formData);
+        localStorage.removeItem('feedback-form-state');
+        emailInput.value = '';
+        messageInput.value = ''; 
+        console.log('Form data submitted:', formData); 
     });
 });
